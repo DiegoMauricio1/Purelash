@@ -1,0 +1,647 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"farve": $cyan-400,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// 5. Du kan lave styling her...
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F8F5F2;
+	color: #5B5B5B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Melodrama', serif;
+	color: #5B5B5B;
+}
+
+p, span, a {
+	font-family: 'Nunito', sans-serif;
+	color: #5B5B5B;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#navbar {
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 2rem;
+		background-color: #E9DED8;
+	}
+
+	.logo {
+		width: 180px;
+		height: auto;
+	}
+
+	.book-btn {
+		background-color: #B3A59E;
+		color: #F8F5F2;
+		font-family: 'Nunito', sans-serif;
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+
+	.book-btn:hover {
+		background-color: #6B625D;
+		color: #F8F5F2;
+	}
+}
+
+#hero {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+
+	.hero-video-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+		}
+
+		.hero-video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		padding: 2rem 2rem;
+		color: #F8F5F2;
+		text-align: left;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		h1 {
+			font-family: 'Melodrama', serif;
+			font-size: 3rem;
+			color: #F8F5F2;
+		}
+
+		p {
+			font-family: 'Nunito', sans-serif;
+			font-size: 1.2rem;
+			color: #F8F5F2;
+			margin-top: auto;
+			margin-bottom: 3rem;
+			max-width: 90%;
+		}
+
+		.book-btn {
+			display: inline-block;
+			font-family: 'Melodrama', serif;
+			background-color: transparent;
+			border: 2px solid #F8F5F2;
+			color: #F8F5F2;
+			font-size: 1.4rem;
+			width: 50%;
+			text-align: center;
+			padding: 1rem 2rem;
+			border-radius: 0;
+			text-decoration: none;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+#services {
+	background-color: #F8F5F2;
+	padding: 2rem 2rem;
+	color: #5B5B5B;
+
+	.section-title {
+		font-family: 'Melodrama', serif;
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-description {
+		font-family: 'Nunito', sans-serif;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.carousel-item img {
+		border-radius: 12px;
+		max-height: 350px;
+		object-fit: cover;
+	}
+
+	.service-info {
+		h3 {
+			font-family: 'Melodrama', serif;
+			font-size: 1.6rem;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-family: 'Nunito', sans-serif;
+			font-size: 0.95rem;
+			line-height: 1.4;
+		}
+	}
+
+	.carousel-indicators [data-bs-target] {
+		background-color: #B3A59E;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+	}
+}
+
+#footer {
+	background-color: #E9DED8;
+	color: #5B5B5B;
+	font-family: 'Nunito', sans-serif;
+	padding: 2rem 2rem;
+	text-align: left;
+
+	.footer-logo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.5rem;
+
+		img {
+			width: 120px;
+		}
+
+		i {
+			font-size: 1.5rem;
+			color: #B3A59E;
+		}
+	}
+
+	h3 {
+		font-family: 'Melodrama', serif;
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 1rem 0 0.5rem;
+	}
+
+	p {
+		margin: 0.25rem 0;
+		font-size: 0.95rem;
+	}
+
+	strong {
+		font-weight: 500;
+	}
+
+	.footer-social {
+		margin: 1rem 0;
+
+		i {
+			font-size: 2rem;
+			color: #B3A59E;
+			margin: 0 0.5rem;
+		}
+	}
+
+	.footer-copy {
+		text-align: center;
+		margin-top: 2rem;
+		font-size: 0.5rem;
+		color: #5B5B5B;
+	}
+}
+
+#booking-navbar {
+	.navbar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		background-color: #E9DED8;
+	}
+
+	.logo {
+		width: 180px;
+		height: auto;
+	}
+}
+
+#book-appointment {
+	background-color: #F8F5F2;
+	padding: 2rem 2rem;
+	font-family: 'Nunito', sans-serif;
+
+	form {
+		color: #5B5B5B;
+
+		label {
+			display: block;
+			margin-bottom: 0.4rem;
+		}
+
+		input:not([type="checkbox"]):not([type="radio"]),
+		select,
+		textarea {
+			width: 100%;
+			padding: 0.5rem;
+			margin-top: 0.3rem;
+			margin-bottom: 0.6rem;
+			box-sizing: border-box;
+		}
+
+		textarea {
+			height: 100px;
+			resize: vertical;
+		}
+
+		.service-options {
+			display: flex;
+			flex-direction: column;
+			gap: 0.6rem;
+			margin: 0.6rem 0;
+
+			.service-box {
+				border: 1px solid #B3A59E;
+				padding: 0.6rem;
+				border-radius: 6px;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				gap: 0.6rem;
+
+				input[type="radio"] {
+					margin: 0;
+				}
+
+				&:hover {
+					background-color: #E9DED8;
+				}
+
+				input[type="radio"]:checked + .service-info {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.checkbox-label {
+			display: flex;
+			align-items: center;
+			margin-top: 1rem;
+
+			input {
+				margin-right: 0.4rem;
+			}
+		}
+	}
+
+	.book-submit-btn {
+		background-color: #B3A59E;
+		border: none;
+		color: #F8F5F2;
+		width: 100%;
+		margin-top: 1rem;
+		padding: 1rem 2rem;
+		font-size: 1.2rem;
+		border-radius: 4px;
+	}
+
+	.message {
+		text-align: center;
+		margin-top: 1rem;
+	}
+}
+
+#admin-login {
+	background-color: #F8F5F2;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+
+	.login-container {
+		padding: 2rem 2rem;
+		border: 1px solid rgba(91, 91, 91, 0.5);
+		border-radius: 12px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		width: 100%;
+		max-width: 400px;
+		text-align: center;
+
+		h1 {
+			color: #5B5B5B;
+			font-family: 'Melodrama', serif;
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.error-message {
+			background-color: #EBE1E1;
+			color: #5B5B5B;
+			padding: 0.75rem;
+			border-radius: 6px;
+			margin-bottom: 1.5rem;
+			font-size: 0.95rem;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			font-family: "Nunito", sans-serif;
+			gap: 1rem;
+
+			.form-group {
+				text-align: left;
+
+				label {
+					display: block;
+					margin-bottom: 0.25rem;
+					font-weight: 500;
+					color: #5B5B5B;
+				}
+
+				input {
+					width: 100%;
+					padding: 0.7rem;
+					border: 1px solid #B3A59E;
+					border-radius: 6px;
+					background-color: #F8F5F2;
+					color: #5B5B5B;
+					font-size: 1rem;
+				}
+
+				input:focus {
+					outline: none;
+					border-color: #5B5B5B;
+				}
+			}
+
+			button {
+				background-color: #B3A59E;
+				color: #F8F5F2;
+				padding: 0.75rem;
+				font-size: 1.1rem;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				font-family: "Nunito", sans-serif;
+				transition: background-color 0.3s ease;
+
+				&:hover {
+					background-color: #6B625D;
+				}
+			}
+		}
+
+		.nav-link {
+			margin-top: 1.5rem;
+
+			a {
+				color: #6B625D;
+				text-decoration: none;
+				font-size: 0.95rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+/* ====================
+   Dashboard Styles
+   ==================== */
+
+#dashboard {
+
+	background-color: #F8F5F2;
+
+	.dashboard-header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 2rem 2rem;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		span {
+			font-size: 1rem;
+			margin-right: 8rem;
+		}
+
+		.logout {
+			margin-top: 5px;
+			background-color: #B3A59E;
+			padding: 0.5rem 1rem;
+			border-radius: 4px;
+			color: #F8F5F2;
+			display: inline-block;
+
+			&:hover {
+				background-color: #6B625D;
+			}
+		}
+	}
+
+	.appointment-card {
+		background-color: #FFFFFF;
+		border: 1px solid #5B5B5B;
+		border-radius: 8px;
+		padding: 1rem;
+		margin: 10px 34px;
+		overflow: hidden;
+
+		h2 {
+			font-size: 1.4rem;
+			font-family: "Nunito", sans-serif;
+		}
+
+		.appointment-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1rem;
+		}
+
+		.status-pill {
+			background-color: #E9DED8;
+			color: #5B5B5B;
+			padding: 5px 10px;
+			font-size: 1rem;
+			text-transform: capitalize;
+		}
+
+		.appointment-info {
+			p {
+				font-size: 0.9rem;
+				margin-top: 0.2rem;
+			}
+		}
+
+		.appointment-actions {
+			margin-top: 1rem;
+			display: flex;
+			gap: 2rem;
+
+			.btn {
+				border: none;
+				padding: 0.4rem 0.8rem;
+				border-radius: 8px;
+				font-size: 1rem;
+				cursor: pointer;
+				color: #F8F5F2;
+			}
+
+			.btn-accept {
+				background-color: #28a745;
+			}
+
+			.btn-deny {
+				background-color: #dc3545;
+
+			}
+		}
+	}
+
+	.no-appointments {
+		padding: 2rem 2rem;
+		background-color: #F8F5F2;
+		text-align: center;
+	}
+
+	.upcoming-bookings {
+		display: block;
+		background-color: #B3A59E;
+		color: white;
+		border-radius: 6px;
+		border: none;
+		width: 84%;
+		padding: 15px;
+		margin: 20px auto;
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		text-align: center;
+	}
+}
+
+#bookings {
+	background-color: #F8F5F2;
+	padding: 2rem;
+
+	h1 {
+		font-size: 2.2rem;
+		margin-bottom: 1rem;
+		color: #5B5B5B;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 2rem;
+
+		a {
+			background-color: #B3A59E;
+			color: #F8F5F2;
+			padding: 0.5rem 1rem;
+			border-radius: 4px;
+			text-decoration: none;
+			font-weight: 500;
+
+			&:hover {
+				background-color: #6B625D;
+			}
+		}
+	}
+
+	.bookings-container {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.booking {
+		background-color: #FFFFFF;
+		border: 1px solid #5B5B5B;
+		border-radius: 8px;
+		padding: 1rem;
+
+		h3 {
+			font-size: 1.4rem;
+			margin-bottom: 0.5rem;
+			color: #5B5B5B;
+			font-family: "Nunito", sans-serif;
+		}
+
+		.booking-details {
+			p {
+				font-size: 0.9rem;
+				color: #5B5B5B;
+				margin-top: 0.2rem;
+			}
+
+			.booking-date {
+				font-size: 1.2rem;
+				font-family: "Nunito", sans-serif;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.no-bookings {
+		text-align: center;
+		background-color: #FFFFFF;
+		border: 1px solid #5B5B5B;
+		border-radius: 8px;
+		padding: 2rem;
+		color: #5B5B5B;
+		font-size: 1rem;
+	}
+}
+
+
+
