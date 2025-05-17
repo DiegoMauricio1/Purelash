@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comments = $_POST['comments'];
 
     // Tjekker om alle felter er udfyldt
-    if (empty($customer_name) || empty($phone_number) || empty($email) || empty($service_id) || empty($appointment_date) || empty($comments)) {
+    if (empty($customer_name) || empty($phone_number) || empty($email) || empty($service_id) || empty($appointment_date)) {
         $message = "Udfyld venligst alle felter.";
     } else {
         // Gemmer aftalen i databasen med status 'pending' (venter)
@@ -120,6 +120,12 @@ $booked_dates_json = json_encode($booked_dates); // Konverterer datoerne til JSO
 
 <section id="book-appointment">
 
+    <?php if (!empty($message)): ?>
+        <div class="message <?php echo strpos($message, "successful") !== false ? 'success' : 'error'; ?>">
+            <?php echo $message; ?>
+        </div>
+    <?php endif; ?>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <label for="customer_name">Dit navn:</label>
     <input type="text" id="customer_name" placeholder="Skriv dit navn her" name="customer_name" value="<?php echo $customer_name; ?>" required>
@@ -149,17 +155,11 @@ $booked_dates_json = json_encode($booked_dates); // Konverterer datoerne til JSO
     <br>
     <br>
     <label for="comments">Eventuelle bemærkninger:</label>
-    <textarea id="comments" name="comments"><?php echo $comments; ?></textarea>
+    <textarea id="comments" placeholder="Har du spørgsmål eller ønsker? Skriv din besked her..." name="comments"><?php echo $comments; ?></textarea>
 
     <button type="submit" class="book-submit-btn">Bestil tid</button>
 
 </form>
-
-<?php if (!empty($message)): ?>
-    <div class="message <?php echo strpos($message, "successful") !== false ? 'success' : 'error'; ?>">
-        <?php echo $message; ?>
-    </div>
-<?php endif; ?>
 
 </section>
 

@@ -344,7 +344,12 @@ a {
 
 	.message {
 		text-align: center;
-		margin-top: 1rem;
+		background-color: #EBE1E1;
+		color: #5B5B5B;
+		padding: 0.75rem;
+		border-radius: 6px;
+		margin-bottom: 1.5rem;
+		font-size: 0.95rem;
 	}
 }
 
@@ -445,14 +450,6 @@ a {
 		}
 	}
 }
-
-
-
-
-
-/* ====================
-   Dashboard Styles
-   ==================== */
 
 #dashboard {
 
