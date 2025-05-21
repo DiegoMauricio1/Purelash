@@ -41,26 +41,52 @@
         <div class="carousel-inner">
 
             <div class="carousel-item active">
-                <img src="images/vippe.jpg" class="d-block w-100" alt="Vippe Extensions">
+                <img src="images/single.jpg" class="d-block w-100" alt="Single Lashes">
                 <div class="service-info text-center mt-3 px-3">
-                    <h3>Vippe Extensions</h3>
-                    <p>Fuldend dit look med skræddersyede eyelash extensions, der tilpasses din øjenform og stil for et naturligt og fyldigt resultat hver gang.</p>
+                    <h3>Single Lashes</h3>
+                    <p>Perfekt til dig der ønsker et diskret, men defineret resultat, med én extension per vippe.</p>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="images/lift.jpg" class="d-block w-100" alt="Lash Lift">
+                <img src="images/brow.jpg" class="d-block w-100" alt="Brow Lamination">
+                <div class="service-info text-center mt-3 px-3">
+                    <h3>Brow Lamination</h3>
+                    <p>Form og løft dine bryn, for et fyldigere, velplejet udtryk der holder.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/hybrid.jpg" class="d-block w-100" alt="Hybrid Vipper">
+                <div class="service-info text-center mt-3 px-3">
+                    <h3>Hybrid Vipper</h3>
+                    <p>En kombination af klassiske og volumen vipper, for et mere markant, men stadig naturligt look.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/lash.jpg" class="d-block w-100" alt="Lash Lift">
                 <div class="service-info text-center mt-3 px-3">
                     <h3>Lash Lift</h3>
-                    <p>Fremhæv dine naturlige vipper med et lash lift, der giver dem et elegant løft og åbner blikket, helt uden brug af extensions eller mascara.</p>
+                    <p>Få et løft og smuk kurve til dine egne vipper, helt uden extensions.</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item">
+                <img src="images/classic.jpg" class="d-block w-100" alt="Classic Lashes">
+                <div class="service-info text-center mt-3 px-3">
+                    <h3>Classic Lashes</h3>
+                    <p>Naturlige og elegante extensions, der giver længde og definition, uden at overtage dit look.</p>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="images/bryn.jpg" class="d-block w-100" alt="Bryn">
+                <img src="images/rens.jpg" class="d-block w-100" alt="Aftagning af vipper og rens">
                 <div class="service-info text-center mt-3 px-3">
-                    <h3>Bryn</h3>
-                    <p>Få dine bryn til at se fyldigere og mere definerede ud med en brow lamination, der former og fastholder dem i den ønskede retning.</p>
+                    <h3>Aftagning af vipper og rens</h3>
+                    <p>Skånsom fjernelse af vipper, efterfulgt af rens for et frisk udgangspunkt.</p>
                 </div>
             </div>
 
@@ -70,6 +96,9 @@
             <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
     </div>
 
