@@ -45,7 +45,10 @@ a {
 	text-decoration: none;
 }
 
+// Vores navigation bar //
+
 #navbar {
+
 	.navbar {
 		display: flex;
 		justify-content: space-between;
@@ -73,6 +76,8 @@ a {
 		color: #F8F5F2;
 	}
 }
+
+// Vores hero sektion //
 
 #hero {
 	position: relative;
@@ -146,6 +151,8 @@ a {
 	}
 }
 
+// Vores behandling sektion //
+
 #services {
 	background-color: #F8F5F2;
 	padding: 2rem 2rem;
@@ -170,6 +177,7 @@ a {
 	}
 
 	.service-info {
+
 		h3 {
 			font-family: 'Melodrama', serif;
 			font-size: 1.6rem;
@@ -190,6 +198,8 @@ a {
 		border-radius: 50%;
 	}
 }
+
+// Vores footer sektion //
 
 #footer {
 	background-color: #E9DED8;
@@ -252,7 +262,10 @@ a {
 	}
 }
 
+// Navigation bar i book_appointment //
+
 #booking-navbar {
+
 	.navbar {
 		display: flex;
 		justify-content: center;
@@ -266,6 +279,8 @@ a {
 		height: auto;
 	}
 }
+
+// book_appointment //
 
 #book-appointment {
 	background-color: #F8F5F2;
@@ -356,6 +371,8 @@ a {
 		font-size: 0.95rem;
 	}
 }
+
+// login side //
 
 #admin-login {
 	background-color: #F8F5F2;
@@ -455,8 +472,9 @@ a {
 	}
 }
 
-#dashboard {
+// dashboard side //
 
+#dashboard {
 	background-color: #F8F5F2;
 
 	.dashboard-header {
@@ -569,6 +587,8 @@ a {
 		text-align: center;
 	}
 }
+
+// bookings side //
 
 #bookings {
 	background-color: #F8F5F2;
