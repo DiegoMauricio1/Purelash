@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Finder alle datoer som allerede er booket (enten afventer eller accepteret)
+// Finder alle datoer som allerede er booket (accepteret)
 $booked_dates_sql = "SELECT appointment_date FROM appointments WHERE status IN ('accepted')";
 $booked_dates_result = $db->sql($booked_dates_sql);
 $booked_dates = [];
